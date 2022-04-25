@@ -1,7 +1,3 @@
-# hfst
-# simulates a Robotic lawn mower
-# april 2022
-#
 import math
 import numpy as np
 
@@ -185,7 +181,7 @@ class displays:
         
 
 class Lawn:
-    """ Eine Wiese, die gemäht wird """
+    """ Eine Wiese, die gemaeht wird """
     def __init__(self, width, height, start):
         self.pos = start
         self.positions = ListOfPositions(width, height)
@@ -266,7 +262,7 @@ class Lawn:
 
     def newDirection( self ):
         """ starting from the acutal position calculate a new direction.
-            the range is minArc < arc < 180° - minArc
+            the range is minArc < arc < 180degree - minArc
         """
         spalte, zeile = self.pos
         minArc = 10 * np.pi/180
@@ -305,8 +301,8 @@ def doIt():
     global zy
     global f0, f0aprox
     
-### gibt es reproduzierbare Verläufe?
-### mehrere Verläufe mit den gleichen Wiese
+### gibt es reproduzierbare Verlaeufe?
+### mehrere Verlaeufe mit den gleichen Wiese
     if( True ):
         fig, ax = plt.subplots()
         np.random.seed(1)
@@ -379,7 +375,7 @@ def doIt():
     fig3, ((ax3[25], ax3[50]), (ax3[70], ax3[100])) = plt.subplots(2,2)
 
 ###
-### Verläufe mit verschiedenen Dimensionen erzeugen / einlesen
+### Verlaeufe mit verschiedenen Dimensionen erzeugen / einlesen
 ###
     method = "bresenheim"
 #    method = "random"
@@ -431,7 +427,7 @@ def doIt():
             file.close
     
 
-### Unnormierte Verläufe
+### Unnormierte Verlaeufe
     if( True ):
         if (modelTyp == "e-Funktion"):
             def model01( t, w ):
@@ -718,7 +714,7 @@ for length in lengthList:
 ##        print( "update Ende ")        
         return (ln, *lnH) #lnH[0], lnH[1]
 
-    if( False ):
+    if( True ):
         print( "vor ani = ", len(lOP)-1)
         frames = len(t)-1
         interval = int(30000/frames)
