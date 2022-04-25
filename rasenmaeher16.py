@@ -1,3 +1,7 @@
+# hfst
+# simulates a Robotic lawn mower
+# april 2022
+#
 import math
 import numpy as np
 
